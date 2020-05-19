@@ -78,6 +78,9 @@ function timeChange (input) {
     }
 }
 function startTimer() {
+    if (countDown) {
+        return;
+    }
     countDown = setInterval(decrement, 1000);
     countDownHasBegun = true;
 }
@@ -93,7 +96,8 @@ function stopTimer() {
 }
 
 function pauseTimer() {
-    clearInterval(countDown)
+    clearInterval(countDown);
+
 }
 
 function refreshTimer () {
@@ -110,7 +114,7 @@ function refreshTimer () {
     setTime();
     setSession();
     setBreak();
-    session.textContent === 'Session';
+    session.textContent = 'Session';
 }
 
 function setSession () {
