@@ -3,7 +3,40 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </header>
 <body>
+<div id = 'pomodoro'>
+    <div class = 'row' id = 'title'> Pomodoro Clock</div>
+    <div class = 'container' id = 'upper'>
+        <div class = 'row'> 
+            <div class = 'bigColumn'>Session</div>
+            <div class = 'bigColumn'>Break</div>
+        </div>
+        <div class= 'row'> 
+            <div class = 'smallColumn sessionButtons' id = 'sessionDisplay'> 25 </div>
+            <div class = 'smallColumn sessionButtons'> 
+                <button id="sessionButton1"><span class="chevron top"></span></button>
+                <button id="sessionButton2"><span class="chevron bottom"></span></button>
+            </div>
+            <div class = 'smallColumn breakButtons' id = 'breakDisplay'> 05 </div>
+            <div class = 'smallColumn breakButtons'> 
+                <button id="breakButton1"><span class="chevron top"></span></button> 
+                <button id="breakButton2"><span class="chevron bottom"></span></button> 
+            </div>
 
+        </div>
+    </div>
+    <div class="container" id = 'lower'>
+        <div class = 'row' id="upperButtons">
+            <button class ='bigColumn' id = 'play'>Play</button>
+            <button class="bigColumn" id = 'refresh'>Refresh</button>
+        </div>
+        <div class = 'row' id = 'session'>Session</div>
+        <div class = 'row' id = 'timer'>timer</div>
+        <div class = 'row' id="lowerButtons">
+            <button class="bigColumn" id="pause">Pause</button>
+            <button class="bigColumn" id="stop">Stop</button>
+        </div>
+    </div>
+</div>
 </body>
 <footer>
 
