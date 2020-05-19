@@ -18,6 +18,7 @@ let breakSecond = 5;
 let change = false;
 let countDown;
 let countDownHasBegun = false;
+let going = false;
 play.addEventListener('click', startTimer);
 stop.addEventListener('click', stopTimer);
 pause.addEventListener('click', pauseTimer);
@@ -78,16 +79,17 @@ function timeChange (input) {
     }
 }
 function startTimer() {
-    if (countDown) {
-        return;
+    if (!going) {
+        countDown = setInterval(decrement, 1000);
+        countDownHasBegun = true;
+        going = true;
     }
-    countDown = setInterval(decrement, 1000);
-    countDownHasBegun = true;
 }
 
 function stopTimer() {
     clearInterval(countDown);
     countDownHasBegun = false;
+    going = false;
     first = sessionFirst;
     second = sessionSecond;
     third = 0;
@@ -97,12 +99,13 @@ function stopTimer() {
 
 function pauseTimer() {
     clearInterval(countDown);
-
+    going = false;
 }
 
 function refreshTimer () {
     clearInterval(countDown);
     countDownHasBegun = false;
+    going = false;
     sessionFirst = 2;
     sessionSecond = 5;
     breakFirst = 0;
