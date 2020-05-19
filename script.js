@@ -110,6 +110,7 @@ function refreshTimer () {
     setTime();
     setSession();
     setBreak();
+    session.textContent === 'Session';
 }
 
 function setSession () {

@@ -1,6 +1,13 @@
 body {
-    background-color: aqua;
+    background-color:rgba(153, 33, 33, 0.44);
+    background-image: url(https://ca-times.brightspotcdn.com/dims4/default/129d07e/2147483647/strip/true/crop/1421x1351+0+0/resize/840x799!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc1%2F99%2F95996981234386c4e0a3e46464df%2Fsdut-tomato-a-20160902);
+    
 }
+
+img {
+    opacity: 0.1;
+}
+
 .container {
     display: block; 
     background-color: black;
@@ -8,29 +15,47 @@ body {
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
 }
+
 .row {
     text-align: center;
 }
+
 .bigColumn{
     display: inline-block;
     width: 100px;
     height: 30px;
-    background-color: red;
+    background-color: #479e6a;
     margin-left: 80px;
     margin-right: 80px;
     padding-bottom: 5px;
     font-size: 20px;
 }
+
 .smallColumn {
     display: inline-block;
     width: 50px;
-    height: 30px;
-    background-color: blue;
+    height: 33px;
+    background-color: rgb(16, 105, 20, 0);
     margin-right: 15px;
     margin-left: 15px;
     padding: 5px;
+    border-radius: 10%;
 }
+
+button {
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #35774f;
+}
+
+button:active {
+    background-color: white;
+}
+
 #title {
     margin-top: 150px;
     padding-top: 30px;
@@ -42,6 +67,33 @@ body {
     height: 100px;
     padding-bottom: 15px;
     margin-bottom: 15px;;
+}
+#breakDisplay, #sessionDisplay {
+    font-size: 30px;
+}
+
+#upper .row {
+    padding-top: 5px;
+
+}
+#upper .bigColumn {
+    font-size: 30px;
+    background-color: transparent;
+    padding-bottom: 2px;
+    text-shadow: black;
+}
+
+#upper button {
+    width: 100%;
+    height: 15px;
+    border: none;
+    background-color: black;
+    outline: none;
+    color: white;
+}
+
+span {
+    padding-right: 4px;
 }
 
 .sessionButtons {
@@ -66,6 +118,7 @@ body {
     position: relative;
     top: 10px;
 }
+
 #session {
     position: relative;
     font-size: 40px;
@@ -76,9 +129,22 @@ body {
     position: relative;
     top: 13px;
 }
+
 #lowerButtons {
     margin-top: 20px;
 }
+
+#lower button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#lower .bigColumn {
+    color: white;
+}
+
 #timer {
     font-size: 50px;;
 }
